@@ -1,0 +1,327 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center; /* Horizontal zentrieren für Desktop-Ansichten */
+    background-color: #DCDCDC;
+    user-select:none;
+}
+
+header {
+    background-color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+header img {
+    max-width: 1200px; /* Bild bleibt responsiv */
+    max-height: 75px;
+    height: auto; /* Automatische Anpassung der Höhe */
+}
+
+nav {
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    font-size: 26px;
+    background-color: #DCDCDC;
+    width: 100%;
+}
+
+nav img {
+    height: 60px;
+    padding: 5px;
+    max-width: 90%;
+    padding-left: 10%;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    padding-right: 10%;
+}
+
+nav li {
+    position: relative;
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    padding: 15px 20px;
+    color: black;
+    text-decoration: none;
+}
+
+nav a:hover {
+    display: block;
+    padding: 15px 20px;
+    background-color: grey;
+    text-decoration: none;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    background-color: #DCDCDC;
+}
+
+nav ul ul ul {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 200px;
+}
+
+nav li:hover>ul,
+nav ul ul li:hover>ul {
+    display: block;
+}
+
+nav ul li:hover>ul ul {
+    top: 0;
+    left: 100%;
+}
+
+.burger-icon {
+    display: none;
+    padding: 15px;
+    cursor: pointer;
+    color: black;
+}
+
+main {
+    max-width: 800px; /* Breite begrenzen */
+    margin: 0 auto; /* Auto-Margin deaktivieren */
+    text-align: left; /* Text links ausrichten innerhalb von main */
+    padding: 20px;
+    background-color: #DCDCDC;
+    margin-bottom: 50px;
+}
+
+main img {
+    max-width: 100%; /* Bilder bleiben responsiv */
+    height: auto; /* Automatische Anpassung der Höhe */
+    
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Änderung: Zentrierung der Links horizontal */
+    align-items: center;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px;
+    margin: 0 10px; /* Änderung: Abstand zwischen den Links */
+    border-radius: 5px; /* Änderung: abgerundete Ecken für die Links */
+    transition: background-color 0.3s, color 0.3s; /* Farbübergänge für Hover */
+}
+
+.footer a:hover {
+    background-color: #555; /* Hintergrundfarbe bei Hover ändern */
+    color: #ffd700;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav img {
+        max-width: 80%;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    nav ul.show {
+        display: flex;
+        background-color:  #DCDCDC;
+    }
+
+    nav li {
+        text-align: center;
+        margin: 0;
+        border-bottom: 1px solid #444;
+    }
+
+    nav ul ul {
+        position: static;
+        display: none;
+        width: 100%;
+    }
+
+    nav ul ul.show {
+        display: block;
+    }
+
+    nav ul ul li {
+        display: block;
+    }
+
+    .burger-icon {
+        display: block;
+    }
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    border: 1px solid;
+    font-size: 26px;
+    overflow-x: scroll;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #dddddd;
+}
+
+tr:nth-child(even) {
+    background-color: lightgray;
+}
+
+tr:hover {
+    background-color: rgba(214, 199, 199, 0.623);
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.cl:nth-child(1) {
+    width:20%;
+}
+
+.tab-content {
+    display: none;
+}
+
+.active-tab {
+    display: block;
+}
+
+.tab-buttons {
+    overflow: hidden;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: sticky;
+    z-index: 0;
+    top: 70px;
+    background-color: inherit;
+}
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+.current_page_item {
+    color: white;
+}
+
+.active {
+    background-color: lightgreen;
+}
+
+li {
+    list-style-type: none;
+}
+
+.text {
+    margin:auto;
+    height:500px;
+    width:500px;
+    background-color: white;
+    border: #333;
+}
+
+.slideShow {
+    max-width: 100%;
+    position: relative;
+    max-height: 80%;
+    margin: auto;
+    overflow: hidden; /* Verhindert, dass Bilder aus dem Container herausragen */
+}
+
+.slide {
+    display: none;
+}
+
+.slideShow img {
+    width: 100%;
+    height: auto;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;  
+    mix-blend-mode: difference;
+    user-select: none;
+    text-shadow: #005194;
+}
+
+.next {
+    border-radius: 3px 0 0 3px;
+    right: 0;
+}
+
+.visible {
+    display: block;
+    width: 100%;
+  }
+
+  h3 {
+    color:black;
+    text-align: center;
+  }
